@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- Added user-scalable=no to prevent accidental zooming on your iPhone -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>for my BEGUM</title>
+    <title>FOR MY BEGUM</title>
     <style>
         body {
             background-color: #0c0c0c;
@@ -27,15 +26,16 @@
             transform-origin: center center;
         }
 
-        /* Responsive scaling for iPhone 6s Plus and similar devices */
-        @media (max-width: 414px) {
+        /* Responsive Fix for S23 Ultra and all phones */
+        @media (max-width: 500px) {
             .bouquet-container {
-                transform: scale(0.8);
+                /* Scale to fit screen while maintaining aspect ratio */
+                transform: scale(calc(100vw / 530));
             }
             
-            /* Reduced scale for the opened card on mobile to keep it on screen */
+            /* Ensure the opened card stays within the bounds of the screen */
             .card-system.open .card-dual-face {
-                transform: rotateY(180deg) scale(2.2) translateX(-10px);
+                transform: rotateY(180deg) scale(2.2) translateX(-5px) !important;
             }
         }
 
@@ -75,7 +75,6 @@
         .r16 { left: 120px; top: 180px; } .r17 { left: 346px; top: 180px; } .r18 { left: 233px; top: 175px; }
         .r19 { left: 185px; top: 160px; } .r20 { left: 281px; top: 160px; } .r21 { left: 233px; top: 100px; }
 
-        /* --- BABY'S BREATH --- */
         .bb { width: 6px; height: 6px; background-color: #ffffff; z-index: 11; border-radius: 1px; }
 
         /* --- CARD --- */
